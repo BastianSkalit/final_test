@@ -1,0 +1,3 @@
+### get event
+GET http://localhost:5000/api/v1/event
+Content-Type: application/json
