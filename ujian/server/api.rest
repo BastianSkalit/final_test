@@ -1,0 +1,16 @@
+### get categories
+GET http://localhost:3000/api/v1/getCategories
+Content-Type: application/json
+
+### post login
+POST http://localhost:3000/api/v1/login
+{
+    "name" : "Bastian",
+    "password":"admin"
+};
+
+
+### get event
+GET http://localhost:3000/api/v1/getEvent
+Content-Type: application/json
+

@@ -21,7 +21,9 @@ exports.event = (req, res) => {
         }
       }
     ]
-  }).then(event => res.send(event));
+  })
+    .then(event => res.send(event))
+    .catch(err => res.send(err));
 };
 
 exports.eventWithId = (req, res) => {
@@ -106,4 +108,10 @@ exports.delete = (req, res) => {
       event
     });
   });
+};
+
+exports.getEventsByTitle = (req, res) => {
+  Event.findAll({ where: { title: req.query.title } }).then(data =>
+    res.send(data)
+  );
 };

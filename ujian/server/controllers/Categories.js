@@ -1,5 +1,4 @@
 const Categories = require("../models").categories;
-const Event = require("../models").event;
 
 const dataCat = data => {
   const newData = data.map(item => {

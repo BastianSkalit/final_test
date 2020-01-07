@@ -51,20 +51,21 @@ app.group("/api/v1", router => {
   router.post("/register", AuthController.register);
 
   // get-all-category
-  router.get("/getCategories", CategoriesController.categories);
-  router.get("/getCategories/:id", CategoriesController.categoriesWithId);
-  router.post("/addCategories", CategoriesController.addCategories);
-  router.put("/updateCategories/:id", CategoriesController.updateCategories);
+  router.get("/getcategories", CategoriesController.categories);
+  router.get("/getcategories/:id", CategoriesController.categoriesWithId);
+  router.post("/addcategories", CategoriesController.addCategories);
+  router.put("/updatecategories/:id", CategoriesController.updateCategories);
 
-  router.get("/getEvent", EventController.event);
-  router.get("/getEvent/:id", EventController.eventWithId);
-  router.post("/addEvent", EventController.addEvent);
-  router.put("/updateEvent/:id", EventController.updateEvent);
+  router.get("/getevent", EventController.event);
+  router.get("/getevent/:id", EventController.eventWithId);
+  router.post("/addevent", EventController.addEvent);
+  router.put("/updateevent/:id", EventController.updateEvent);
+  router.get("/getevent/", EventController.getEventsByTitle);
 
-  router.get("/getUser", AccountController.user);
-  router.get("/getUser/:id", AccountController.userWithId);
-  router.post("/addUser", AccountController.addUser);
-  router.put("/updateUser/:id", AccountController.updateUser);
+  router.get("/getuser", AccountController.user);
+  router.get("/getuser/:id", AccountController.userWithId);
+  router.post("/adduser", AccountController.addUser);
+  router.put("/updateuser/:id", AccountController.updateUser);
 });
 
 // app.use((err, req, res, next) => {
